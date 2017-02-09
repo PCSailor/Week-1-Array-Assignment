@@ -13,36 +13,38 @@
 // console.log(test());
 
 
-function greatLess () {
-  var baseLine = prompt("Please enter a number:");
-  var a = +prompt("Please enter a number:"); //
-  var b = Number(prompt("Please enter a second number:")); //
-  var c = parseInt(prompt("Please enter a third number:")); // only handles leading characters and wont add decimals
-  var d = parseFloat(prompt("Please enter a fourth number:")); // will handle 4.5 and 4.5xyz
-  var e = (prompt("Please enter a fifth number:")) * 1; // the * operator forces everything to act like numbers.
-  if (a > b) {
-    alert("The first number was bigger!");
-  } else if (a < b) {
-    alert("The second number was bigger!");
-  } else {
-    alert("The numbers are the same!");
-  }
-  console.log(baseLine);
-  console.log(typeof baseLine);
-  console.log(a);
-  console.log(typeof a);
-  console.log(b);
-  console.log(typeof b);
-  console.log(c);
-  console.log(typeof c);
-  console.log(d);
-  console.log(typeof d);
-  console.log(e);
-  console.log(typeof e);
-    return;
-}
-console.log(typeof greatLess());
-console.log(typeof greatLess);
+
+// function greatLess () {
+//   var baseLine = prompt("Please enter a number:");
+//   var a = +prompt("Please enter a number:"); //
+//   var b = Number(prompt("Please enter a second number:")); //
+//   var c = parseInt(prompt("Please enter a third number:")); // only handles leading characters and wont add decimals
+//   var d = parseFloat(prompt("Please enter a fourth number:")); // will handle 4.5 and 4.5xyz
+//   var e = (prompt("Please enter a fifth number:")) * 1; // the * operator forces everything to act like numbers.
+//   if (a > b) {
+//     alert("The first number was bigger!");
+//   } else if (a < b) {
+//     alert("The second number was bigger!");
+//   } else {
+//     alert("The numbers are the same!");
+//   }
+//   console.log(baseLine);
+//   console.log(typeof baseLine);
+//   console.log(a);
+//   console.log(typeof a);
+//   console.log(b);
+//   console.log(typeof b);
+//   console.log(c);
+//   console.log(typeof c);
+//   console.log(d);
+//   console.log(typeof d);
+//   console.log(e);
+//   console.log(typeof e);
+//     return;
+// }
+// console.log(typeof greatLess());
+// console.log(typeof greatLess);
+
 
 
 // var baseLine = prompt("Please enter a number:"); // added later
@@ -72,3 +74,27 @@ console.log(typeof greatLess);
 //    c = 3456
 //    d = 3456.89
 //    e = NaN
+
+
+
+function greatLess () {
+  var a = parseFloat(prompt("Please enter a number:"));
+  var b = parseFloat(prompt("Please enter a second number:"));   // NOTE: Letters first, than numbers results in NaN and message 'Numbers are the same'
+  if (a > b) {
+    alert("The first number was bigger!");
+    console.log("The first number was bigger!");
+  } else if (a < b) {
+    alert("The second number was bigger!");
+    console.log("The second number was bigger!");
+  } else {
+    alert("The numbers are the same!");
+    console.log("The numbers are the same!");
+  }
+  console.log(a);
+  console.log(typeof a);
+  console.log(b);
+  console.log(typeof b);
+    return;
+}
+console.log(typeof greatLess()); // QUESTION: Why undefined??
+// console.log(typeof greatLess);
